@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Таблица Пифагора</title>
+    <!-- Подключение стилей и скриптов -->
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script type="text/javascript" src="js/jquery-3.5.1.js"></script>
+    <script type="text/javascript" src="js/matrix_obfus.js"></script>
+</head>
+<body>
+    <!-- Структура таблицы Пифагора -->
+    <div class='square'>
+        <div>
+            <div>
+                <div class='tn-atom tn-atom__html'>
+                    <div class="form_wr">
+                        <div class="req">Введите Вашу дату рождения:</div>
+                        <input type="text" id="matrix_date" maxlength="10" class="form" title="Введите в это поле Вашу дату рождения в формате: ДД.ММ.ГГГГ" placeholder="Ваша дата рождения в формате ДД.ММ.ГГГГ">
+                        <button class="calc" style="line-height:30px">
+                            Рассчитать психоматрицу
+                        </button>
+                    </div>
+                    <table class="greyGridTable">
+                        <!-- Тело таблицы -->
+                    </table>
+                    <input type="text" id="matrix_text" placeholder="После расчета здесь будут Ваши данные для копирования">
+                    <button class="copy">Скопировать данные</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Скрипты для модального окна -->
+    <script>
+        $(document).ready(function(){
+            $('.modalDialog').click(function () {
+                $(".modalDialog").addClass('hidemodal');
+            });
+        });
+    </script>
+    <script>
+        $(document).ready(function(){
+            $('.close').click(function () {
+                $(".modalDialog").addClass('hidemodal');
+            });
+        });
+    </script>
+</body>
+</html>
